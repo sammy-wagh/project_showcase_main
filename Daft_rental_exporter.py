@@ -4,7 +4,7 @@ l=[] #initialing empty list
 
 base_url=input("Enter daft rental page link") #Please enter a daft rental site only. https://www.daft.ie/dublin-city/residential-property-for-rent/dublin-6/?s%5Bignored_agents%5D%5B0%5D=1551&searchSource=rental&offset=180
 try: #Exception handling in case of incorrect website entry.
-    r=requests.get(base_url,headers={'User-agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/62.0'})
+    r=requests.get(base_url,headers={'User-agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/62.0'}) #user agent has been used to pretend as a browser
 except:
     print("Invalid website : Daft rental only")
     
