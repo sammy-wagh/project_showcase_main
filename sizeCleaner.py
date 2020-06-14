@@ -4,8 +4,9 @@ import shutil
 # The directory that we are interested in cleaning up
 source_Path=input("Enter Source Path \n")
 dest_path=input("Enter Destination Path \n")
+size=int(input("Enter size above which files should be copied in MB"))
 # The threshold size, above which files would be copied.
-tresSize = '50000000'
+tresSize = size*1000000
 
 # All the file paths will be stored in this list
 filesList= []
@@ -19,7 +20,7 @@ for i in filesList:
     fileSize = os.path.getsize(str(i))
 
     # Print the files that meet the condition
-    if int(fileSize) >= int(tresSize):
+    if int(fileSize) >= tresSize:
         print("The File: " + str(i) + " is: " + str(fileSize) + " Bytes" )
         if(os.access(str(i),os.X_OK and os.W_OK)): #Ignore Read Only files
             print("Now copying the file mentioned above")
