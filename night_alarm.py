@@ -1,6 +1,6 @@
 #This program detects faces in real time and if a face is found changes the output color from gray to the actual color and makes a sound
-#this is particularly helpful in scenarios where there is a continuous feed for hours without no person(night time) and displaying color takes more energy. 
-#to color of the outputthough the training set is quite small*/
+#this is particularly helpful in scenarios where there is a continuous feed for hours without no person(night time) and displaying color takes more energy(money). 
+#The training set is quite small and this can be improved with better training set*/
 
 import cv2,time #OpenCV has been used
 import winsound #For creating sound when face is detected.
