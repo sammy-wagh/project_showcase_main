@@ -8,8 +8,8 @@ try: #Exception handling in case of incorrect website entry.
 except:
     print("Invalid website : Daft rental only")
     
-    c=r.content #Store the content of the ste
-    soup=BeautifulSoup(c,"html.parser") #Parse the content of the website
+c=r.content #Store the content of the ste
+soup=BeautifulSoup(c,"html.parser") #Parse the content of the website
 all=soup.find_all("div",{"class":"StandardPropertyInfo__detailsCopyContainer"}) #Analyze each listing
 
 for i in all: #Iterate through each field of 1 listing
